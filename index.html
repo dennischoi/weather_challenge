@@ -10,24 +10,24 @@
   </head>
   <body>
 
+    <div class="each-day">
+
 <!-- CONTAINER FOR ENTIRE FORCAST -->
-    <div class="weather-forcast">
-      <!-- LEFT BLOCK -->
-      <div class="left-side">
-        <!-- TEMP & LOCATION DIV -->
-        <div class="temperature"><span id="temperature">0</span>&deg;</div>
-        <div class="location"><span id="location">Unknown</span></div>
-      </div>
+      <div class="weather-forcast">
+        <!-- ICON -->
+        <div class="day">
 
-      <!-- RIGHT BLOCK -->
-      <div class="right-side">
-        <!-- ICON DIV -->
-        <div class="top-right">
-          <img id="icon" width="75px" src="" />
         </div>
-
+        <div class="top">
+          <div class="location"><span id="location">Unknown</span></div>
+          <img id="icon" width="100px" src="assets/img/01d.png" />
+        </div>
+        <div class="middle">
+          <!-- TEMP & LOCATION DIV -->
+          <div class="temperature"><span id="temperature">0</span>&deg;</div>
+        </div>
         <!-- HUMIDITY & WIND DIV -->
-        <div class="bottom-right">
+        <div class="bottom">
           <div class="humidity">
             <img src="" height="16px" />
             <span id="humidity">0</span>%
@@ -36,10 +36,12 @@
             <span id="wind">0</span> mph <span id="direction">N</span>
           </div>
         </div>
+
+
+        </div>
+
       </div>
-
     </div>
-
 
 
   </body>

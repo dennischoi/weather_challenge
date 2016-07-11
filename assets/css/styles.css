@@ -1,0 +1,43 @@
+
+.each-day{
+  overflow: hidden;
+  padding: 1rem 5%;
+}
+
+.weather-forcast {
+  width: 13%;
+  float: left;
+  /* TEMP BORDER*/
+  border: 2px black solid;
+  /* TEMP COLOR*/
+  background-color: lightblue;
+
+}
+
+.top {
+  text-align: center;
+  /* TEMP BORDER*/
+  border: 2px black solid;
+
+}
+
+/* TEMPERATURE AND BLOCK */
+.middle {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* TEMP BORDER*/
+  border: 2px black solid;
+
+}
+div .temperature {
+  font-size: 1.5625rem;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* TEMP BORDER*/
+  border: 2px black solid;
+}
