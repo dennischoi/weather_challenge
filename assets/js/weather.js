@@ -7,10 +7,10 @@ var wind;
 var temp;
 var direction;
 
-function updateZip(zip) {
-    var url = "http://api.openweather.org/data/2.5/weather?" +
-      "zip=" + zip +
-      "%APPID=" + APPID;
+function updateById(id) {
+    var url = "http://api.openweathermap.org/data/2.5/weather?" +
+      "id=" + id +
+      "&APPID=" + APPID;
     sendRequest(url)
 }
 
@@ -21,17 +21,52 @@ function sendRequest(url) {
             var data = JSON.parse(xmlhttp.responseText);
             var weather = {};
             weather.icon = data.weather[0].id;
+            // DETERMINE WHICH ICON IS USED
+            // THUNDERSTORM
+              if (weather.icon == 200 || 201 || 202 || 210 || 211 || 212 || 221 || 230 || 231 || 232) {
+                weather.icon ='11d'
+            // DRIZZLE
+              }else if (weather.icon == 300 || 301 || 302 || 310 || 311 || 312 || 313 || 314 || 321) {
+                weather.icon = '09d'
+            //  RAIN
+              }else if (weather.icon == 500 || 501 || 502 || 503 || 504) {
+                weather.icon = '10d'
+              }else if (weather.icon == 511) {
+                weather.icon = '13d'
+              }else if (weather.icon == 520 || 521 || 522 || 531) {
+                weather.icon = '09d'
+            //  SNOW
+              }else if (weather.icon == 600 || 601 || 602 || 611 || 612 || 615 || 616 || 620 || 621 || 622) {
+                weather.icon = '13d'
+            //  ATMOSPHERE
+              }else if (weather.icon == 701 || 711 || 721 || 731 || 741 || 751 || 761 || 762 || 771 || 781) {
+                weather.icon = '50d'
+            // CLEAR & CLOUDS
+              }else if (weather.icon == 800) {
+                weather.icon = '01d'
+              }else if (weather.icon == 801) {
+                weather.icon = '02d'
+              }else if (weather.icon == 802) {
+                weather.icon = '03d'
+              }else if (weather.icon == 803 || 804) {
+                weather.icon = '04d'
+              }
+
             weather.humidity = data.main.humidity;
             weather.wind = data.wind.speed;
             weather.direction = data.wind.deg;
             weather.loc = data.name;
-            weather.temp = data.main.temp;
+            weather.temp = kelvinToCelcius(data.main.temp);
 
             update(weather);
         }
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+}
+
+function kelvinToCelcius(k) {
+    return Math.round(k - 273.15)
 }
 
 
@@ -41,7 +76,7 @@ function update(weather) {
     humidity.innerHTML = weather.humidity;
     wind.innerHTML = weather.wind;
     direction.innerHTML = weather.direction;
-    temp.innerHtml = weather.temp;
+    temp.innerHTML = weather.temp;
 }
 
 window.onload = function() {
@@ -52,4 +87,5 @@ window.onload = function() {
     direction = document.getElementById('direction')
     temp = document.getElementById('temperature')
 
+    updateById(2643743)
 }
