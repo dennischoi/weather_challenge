@@ -8,8 +8,11 @@ var temp;
 var direction;
 
 function updateById(id) {
-    var url = "http://api.openweathermap.org/data/2.5/weather?" +
-      "id=" + id +
+    var url = "http://api.openweathermap.org/data/2.5/forecast/daily?" +
+      "q=" + city +
+      "&mode=json&units=metric" +
+      // PRONE TO CHANGE FROM 2 to 7
+      "&cnt=2" +
       "&APPID=" + APPID;
     sendRequest(url)
 }
@@ -104,6 +107,13 @@ window.onload = function() {
     wind = document.getElementById('wind')
     direction = document.getElementById('direction')
     temp = document.getElementById('temperature')
+
+    loc2 = document.getElementById('location2')
+    icon2 = document.getElementById('icon2')
+    humidity2 = document.getElementById('humidity2')
+    wind2 = document.getElementById('wind2')
+    direction2 = document.getElementById('direction2')
+    temp2 = document.getElementById('temperature2')
 
     updateById(6167865)
 
