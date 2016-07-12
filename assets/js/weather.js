@@ -54,7 +54,7 @@ function sendRequest(url) {
 
             weather.humidity = data.main.humidity;
             weather.wind = data.wind.speed;
-            weather.direction = data.wind.deg;
+            weather.direction = compassDirection(data.wind.deg);
             weather.loc = data.name;
             weather.temp = kelvinToCelcius(data.main.temp);
 
@@ -66,9 +66,24 @@ function sendRequest(url) {
 }
 
 function kelvinToCelcius(k) {
-    return Math.round(k - 273.15)
+    return Math.round(k - 273.15);
 }
 
+function compassDirection(degree) {
+  var range = 360/8;
+  var low = 360 - range/2;
+  var high = low + range % 360;
+  var angles = [ "N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+
+  for (i in angles) {
+    if (degree >= low && degree < high)
+      return angles[i];
+
+    low = (low + range) % 360;
+    high = (high + range) % 360;
+  }
+  return "N";
+}
 
 function update(weather) {
     loc.innerHTML = weather.loc;
