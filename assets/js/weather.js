@@ -85,6 +85,7 @@ function compassDirection(degree) {
   return "N";
 }
 
+
 function update(weather) {
     loc.innerHTML = weather.loc;
     icon.src = "assets/img/" + weather.icon + ".png";
@@ -94,6 +95,8 @@ function update(weather) {
     temp.innerHTML = weather.temp;
 }
 
+
+
 window.onload = function() {
     loc = document.getElementById('location')
     icon = document.getElementById('icon')
@@ -102,5 +105,7 @@ window.onload = function() {
     direction = document.getElementById('direction')
     temp = document.getElementById('temperature')
 
-    updateById(2643743)
+    updateById(6167865)
+
+
 }
