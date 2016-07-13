@@ -4,22 +4,114 @@
   padding: 1rem 5%;
 }
 
+
+.weather-forecast {
+
+}
+
+.current-weather {
+  width: 25%;
+  float: left;
+  position: relative;
+  background-color: rgb(145, 145, 145);
+}
+
+.current-weather-stats {
+  width: 25%;
+  float: left;
+  text-align: center;
+  line-height: 4vw;
+  position: relative;
+  padding-top: 2vw;
+}
+
+div .current-weather img {
+  z-index: 0;
+  visibility: visible;
+
+}
+
+.current-container {
+  border: 2px black solid;
+}
+
+.location-1 {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.location-style-1 {
+  font-size: 4vw;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.day {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+div .day span {
+  font-size: 3vw;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.temperature-1 strong {
+  font-size: 3vw;
+}
+
+.current-style {
+  font-size: 1.75vw;
+  font-weight: bold;
+}
+
+
+
+
 .weather-forcast-1 {
-  width: 13%;
+  width: 16.6%;
+  padding-left: auto;
+  padding-right: auto;
   float: left;
   /* TEMP BORDER*/
-  border: 2px black solid;
+  /*border: 2px black solid;*/
   /* TEMP COLOR*/
   background-color: lightblue;
 
 }
 
+.top-1 {
+  overflow: hidden;
+}
+
 .top {
   text-align: center;
   /* TEMP BORDER*/
-  border: 2px black solid;
+  /*border: 2px black solid;*/
+  padding: 15px 0;
+  height: 200px;
 
 }
+
+.main {
+  padding-top: 25px;
+
+}
+
+
+.main-style {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 
 /* TEMPERATURE AND BLOCK */
 .middle {
@@ -30,8 +122,10 @@
   border: 2px black solid;
 
 }
+
 div .temperature {
   font-size: 1.5625rem;
+
 }
 
 .bottom {

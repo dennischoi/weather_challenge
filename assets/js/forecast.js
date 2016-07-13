@@ -19,10 +19,11 @@ var icon7; var main7; var descript7; var humidity7; var wind7; var temp7; var di
 
 // INPUT LOCATION TO RETRIVE DATA FROM API (of that location)
 function updateByPlace(place) {
+    // var place =
     var url = "http://api.openweathermap.org/data/2.5/forecast/daily?" +
       "q=" + place +
       "&mode=json&units=metric" +
-      // PRONE TO CHANGE FROM 2 to 7
+      // PRONE TO CHANGE FROM 2 (practice) to 7
       "&cnt=7" +
       "&APPID=" + APPID;
     sendRequest(url)
@@ -104,11 +105,12 @@ function sendRequest(url) {
             var pressureSum = pressures.reduce(add, 0);
 
             function add(a, b) {
-              return Math.round((a + b)/7);
+              return (a + b);
             }
-            console.log(pressureSum)
+            var average = pressureSum / 7
+            console.log(average)
 
-            forecast.avgPressure = pressureSum
+            forecast.avgPressure = Math.round(average)
 
             update(forecast)
         }
@@ -274,5 +276,5 @@ window.onload = function() {
 
 
 // Insert City name to find the weather stats of that area!
-  updateByPlace("Toronto");
+  updateByPlace("Ottawa");
 }

@@ -11,41 +11,46 @@
   </head>
   <body>
 
-  <div class="each-day">
 
-      <div class="">
-          <p>Pressure Avg. for the Week ~~~ <bold id="pressure-avg">0</bold></p>
-          <div class="location"><span id="location">Unknown</span></div>
-      </div>
+
 <!-- CONTAINER FOR ENTIRE FORCAST -->
-      <div class="weather-forcast-1">
+      <div class="weather-forcast">
         <!-- ICON -->
-          <div class="day">
-
-          </div>
-          <div class="top">
-              <img id="icon" width="100%" src="assets/img/01d.png" />
-              <div class="main"><span id="main">Unknown</span></div>
-              <div class="description"><span id="description">Unknown</span></div>
-          </div>
-          <div class="middle">
-          <!-- TEMP & LOCATION DIV -->
-              <div class="temperature"><span id="temperature">0</span>&deg;</div>
-          </div>
-        <!-- HUMIDITY & WIND DIV -->
-          <div class="bottom">
-              <div class="humidity">
-                  <img src="" height="16px" />
-                  <span id="humidity">0</span>%
+          <div class="top-1">
+              <div class="current-weather">
+                  <img id="icon" width="100%" src="assets/img/01d.png" />
+                  <div class="location-1"><span id="location" class="location-style-1">Unknown</span></div>
+                  <div class="day">
+                      <span>TODAY <br></span>
+                      <div class="temperature-1"><span id="temperature" class="current-style">0</span><strong class="">&deg;</strong></div>
+                  </div>
               </div>
-              <div class="wind">
-                  <span id="wind">0</span> mph <span id="direction">N</span>
+
+              <div class="current-weather-stats">
+                <!-- TEMP & LOCATION DIV -->
+                <div class="main-1"><span id="main" class="current-style">Unknown</span></div>
+                <div class="description-1"><span id="description" class="current-style">Unknown</span></div>
+                <!-- HUMIDITY & WIND DIV -->
+                <div class="humidity-1">
+                  <img src="assets/img/humidity.jpeg" height="20vw" />
+                  <span id="humidity" class="current-style">0</span><strong class="current-style">%</strong>
+                </div>
+                <div class="wind-1">
+                  <img src="assets/img/wind.png" width="20vw" />
+                  <span id="wind" class="current-style">0</span> <strong class="current-style">mph - </strong> <span id="direction" class="current-style">N</span>
+                </div>
+                <div class="pressure">
+                  <span class="current-style">Pressure Avg/Week : <bold id="pressure-avg">0</bold></span>
+                </div>
+
               </div>
           </div>
       </div>
 
 
+<!-- Each DAY -->
 
+  <div class="each-day">
 <!-- CONTAINER FOR ENTIRE FORCAST -->
       <div class="weather-forcast-1">
           <!-- ICON -->
@@ -54,12 +59,12 @@
           </div>
           <div class="top">
               <img id="icon2" width="100%" src="assets/img/01d.png" />
-              <div class="main"><span id="main2">Unknown</span></div>
+              <div class="main"><span id="main2" class="main-style">Unknown</span></div>
               <div class="description"><span id="description2">Unknown</span></div>
           </div>
           <div class="middle">
           <!-- TEMP & LOCATION DIV -->
-              <div class="temperature"><span id="temperature2">0</span>&deg;</div>
+              <div class="temperature"><span id="temperature2" class="temp-style">0</span>&deg;</div>
           </div>
         <!-- HUMIDITY & WIND DIV -->
           <div class="bottom">
@@ -81,12 +86,12 @@
           </div>
           <div class="top">
               <img id="icon3" width="100%" src="assets/img/01d.png" />
-              <div class="main"><span id="main3">Unknown</span></div>
+              <div class="main"><span id="main3" class="main-style">Unknown</span></div>
               <div class="description"><span id="description3">Unknown</span></div>
           </div>
           <div class="middle">
           <!-- TEMP & LOCATION DIV -->
-              <div class="temperature"><span id="temperature3">0</span>&deg;</div>
+              <div class="temperature"><span id="temperature3" class="temp-style">0</span>&deg;</div>
           </div>
           <!-- HUMIDITY & WIND DIV -->
           <div class="bottom">
@@ -108,12 +113,12 @@
           </div>
           <div class="top">
               <img id="icon4" width="100%" src="assets/img/01d.png" />
-              <div class="main"><span id="main4">Unknown</span></div>
+              <div class="main"><span id="main4" class="main-style">Unknown</span></div>
               <div class="description"><span id="description4">Unknown</span></div>
           </div>
           <div class="middle">
                 <!-- TEMP & LOCATION DIV -->
-              <div class="temperature"><span id="temperature4">0</span>&deg;</div>
+              <div class="temperature"><span id="temperature4" class="temp-style">0</span>&deg;</div>
           </div>
                 <!-- HUMIDITY & WIND DIV -->
           <div class="bottom">
@@ -136,12 +141,12 @@
           </div>
           <div class="top">
               <img id="icon5" width="100%" src="assets/img/01d.png" />
-              <div class="main"><span id="main5">Unknown</span></div>
+              <div class="main"><span id="main5" class="main-style">Unknown</span></div>
               <div class="description"><span id="description5">Unknown</span></div>
           </div>
           <div class="middle">
           <!-- TEMP & LOCATION DIV -->
-              <div class="temperature"><span id="temperature5">0</span>&deg;</div>
+              <div class="temperature"><span id="temperature5" class="temp-style">0</span>&deg;</div>
           </div>
           <!-- HUMIDITY & WIND DIV -->
           <div class="bottom">
@@ -164,12 +169,12 @@
           </div>
           <div class="top">
               <img id="icon6" width="100%" src="assets/img/01d.png" />
-              <div class="main"><span id="main6">Unknown</span></div>
+              <div class="main"><span id="main6" class="main-style">Unknown</span></div>
               <div class="description"><span id="description6">Unknown</span></div>
           </div>
           <div class="middle">
           <!-- TEMP & LOCATION DIV -->
-              <div class="temperature"><span id="temperature6">0</span>&deg;</div>
+              <div class="temperature"><span id="temperature6" class="temp-style">0</span>&deg;</div>
           </div>
           <!-- HUMIDITY & WIND DIV -->
           <div class="bottom">
@@ -192,12 +197,12 @@
           </div>
           <div class="top">
               <img id="icon7" width="100%" src="assets/img/01d.png" />
-              <div class="main"><span id="main7">Unknown</span></div>
+              <div class="main"><span id="main7" class="main-style">Unknown</span></div>
               <div class="description"><span id="description7">Unknown</span></div>
           </div>
           <div class="middle">
           <!-- TEMP & LOCATION DIV -->
-              <div class="temperature"><span id="temperature7">0</span>&deg;</div>
+              <div class="temperature"><span id="temperature7" class="temp-style">0</span>&deg;</div>
           </div>
           <!-- HUMIDITY & WIND DIV -->
           <div class="bottom">
