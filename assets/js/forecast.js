@@ -2,7 +2,7 @@ var APPID = "80341d69375e56322835d5bd041bf7e5";
 var forecast = [];
 var avgPressure;
 // FIRST DAY
-var loc; var icon; var main; var descript; var humidity; var wind; var temp; var direction;
+var country; var loc; var icon; var main; var descript; var humidity; var wind; var temp; var direction;
 // SECOND DAY
 var icon2; var main2; var descript2; var humidity2; var wind2; var temp2; var direction2;
 // THIRD DAY
@@ -20,14 +20,22 @@ var icon7; var main7; var descript7; var humidity7; var wind7; var temp7; var di
 // INPUT LOCATION TO RETRIVE DATA FROM API (of that location)
 function updateByPlace(place) {
     // var place =
+
     var url = "http://api.openweathermap.org/data/2.5/forecast/daily?" +
       "q=" + place +
       "&mode=json&units=metric" +
       // PRONE TO CHANGE FROM 2 (practice) to 7
       "&cnt=7" +
       "&APPID=" + APPID;
+      console.log(url)
     sendRequest(url)
 }
+
+
+
+
+
+
 
 function sendRequest(url) {
     var xmlhttp = new XMLHttpRequest();
@@ -94,6 +102,7 @@ function sendRequest(url) {
             forecast.main7 = data.list[6].weather[0].main;
             // RETRIEVED NAME
             forecast.name = data.city.name;
+            forecast.country = data.city.country;
 
 
             // BONUS - WEEK PRESSURE AVERAGE
@@ -118,6 +127,7 @@ function sendRequest(url) {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
+
 
 
 // PRONE TO CHANGE...
@@ -181,6 +191,7 @@ function update(forecast) {
     icon7.src = "assets/img/" + forecast.icon7 + ".png";
     // ONLY REQUIRE LOCATION ONCE...
     loc.innerHTML = forecast.name;
+    country.innerHTML = forecast.country;
 
 
 
@@ -213,6 +224,7 @@ function compassDirection(degree) {
 window.onload = function() {
     // FUNCTION TO GET ELEMENTS ON THE INDEX THROUGH SPECIFIC ID's
     loc = document.getElementById('location')
+    country = document.getElementById('country')
     icon = document.getElementById('icon')
     main = document.getElementById('main')
     descript = document.getElementById('description')
@@ -276,5 +288,22 @@ window.onload = function() {
 
 
 // Insert City name to find the weather stats of that area!
-  updateByPlace("Ottawa");
+  updateByPlace("Toronto");
+
+}
+
+
+// SEARCH FUNCTION
+
+function searchBar(ev) {
+  var search = document.getElementById('search');
+  search.addEventListener('submit',function(place) {
+    place.preventDefault();
+    var place = document.getElementById('search-input').value;
+    console.log(place)
+
+    updateByPlace(place);
+
+    // window.location.reload();
+  });
 }

@@ -1,3 +1,36 @@
-<!-- API FOR TORONTO -->
-<!-- {"_id":6167865,"name":"Toronto","country":"CA","coord":{"lon":-79.416298,"lat":43.700111}}
- -->
+<!--
+WEATHER STATION
+TO START UP JUST OPEN INDEX.HTML IN BROWSER AND SEARCH THE WEATHER!
+
+
+- Simple application to check the weather of different locations
+
+Features:
+
+- Search function
+    - Can search different cities to check weather of particular location. Will also give you country...
+
+- 7 Day forecast
+
+- Retrievable Data through API (openweathermap)
+    - Various data
+        - location, temperature, humidity, wind, etc.
+
+
+BONUS
+
+- Pressure (Average pressure over the week)
+
+
+
+NOT COMPLETED
+
+- Graph/Chart of forecast
+
+
+
+
+
+
+
+-->

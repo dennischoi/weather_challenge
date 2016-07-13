@@ -1,137 +1,193 @@
-
-.each-day{
-  overflow: hidden;
-  padding: 1rem 5%;
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #c1bdd3;
 }
 
 
-.weather-forecast {
+.container-all {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+.horizontal-break {
+  position: relative;
+  height: auto;
+  padding: 0.75rem 1.0625rem;
+  box-shadow: rgba(128, 128, 128, 0) 0px 0px 0px 1px inset;
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out;
 
 }
+hr {
+  color: rgb(232, 232, 232);
+  background-color: rgb(232, 232, 232);
+  border-color: rgr(232, 232, 232);
+}
+
+
+
+/*///////////////////////////////////
+CURRENT WEATHER CSS
+/////////////////////////////////////*/
 
 .current-weather {
-  width: 25%;
+  width: 15%;
   float: left;
   position: relative;
-  background-color: rgb(145, 145, 145);
 }
 
 .current-weather-stats {
-  width: 25%;
+  width: 20%;
   float: left;
-  text-align: center;
   line-height: 4vw;
   position: relative;
-  padding-top: 2vw;
+  /*margin-top: 2vw;*/
 }
 
-div .current-weather img {
-  z-index: 0;
-  visibility: visible;
-
+.top-1 {
+  overflow: hidden;
+  display: inline;
 }
 
-.current-container {
-  border: 2px black solid;
-}
-
-.location-1 {
-  text-align: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.temperature-1 {
+  font-size: 3vw;
+  font-weight: bold;
+  display: inline;
 }
 
 .location-style-1 {
   font-size: 4vw;
   font-weight: bold;
-  font-family: sans-serif;
 }
 
-.day {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.country-style {
+  font-size: 2vw;
+  font-weight: bold;
 }
 
-div .day span {
+div .current-day span {
   font-size: 3vw;
   font-weight: bold;
-  font-family: sans-serif;
 }
 
 .temperature-1 strong {
   font-size: 3vw;
 }
 
-.current-style {
-  font-size: 1.75vw;
-  font-weight: bold;
+table tr td {
+  border: 1px solid #ddd;
+  padding-left: 0.5vw;
+  padding-right: 1vw;
+}
+
+#week-avg {
+  font-size: 1vw;
 }
 
 
 
 
+/*///////////////////////////////////
+FORECAST (REST OF THE WEATHER STATS CSS)
+/////////////////////////////////////*/
+
+
+.each-day{
+  overflow: hidden;
+  text-align: center;
+  padding: 35px;
+}
+
+
 .weather-forcast-1 {
-  width: 16.6%;
+  width: 16%;
   padding-left: auto;
   padding-right: auto;
   float: left;
   /* TEMP BORDER*/
-  /*border: 2px black solid;*/
-  /* TEMP COLOR*/
-  background-color: lightblue;
+  border-right: 1px black solid;
+
+}
+/*TO MAKE MINOR CHANGE TO BORDER RIGHT ON LAST DAY*/
+.weather-forcast-last {
+  width: 16%;
+  padding-left: auto;
+  padding-right: auto;
+  float: left;
 
 }
 
-.top-1 {
-  overflow: hidden;
-}
 
-.top {
+
+
+/*///////////////////////////////////
+SEARCH FUNCTION
+/////////////////////////////////////*/
+
+.button_box2 {
   text-align: center;
-  /* TEMP BORDER*/
-  /*border: 2px black solid;*/
-  padding: 15px 0;
-  height: 200px;
-
 }
 
-.main {
-  padding-top: 25px;
+/*-------------------------------------*/
+.cf:before, .cf:after{
+content:"";
+display: table;
+}
+.cf:after{
+clear:both;
+}
+.cf{
+zoom:1;
+}
+/*-------------------------------------*/
 
+.form-wrapper-2 {
+width: 330px;
+padding: 4px;
+background: #555;
+border-radius: 10px;
+}
+.form-wrapper-2 input {
+width: 210px;
+height: 20px;
+padding: 10px 5px;
+float: left;
+font: bold 15px 'Oswald', sans-serif;
+border: 0;
+background: #eee;
+border-radius: 3px 0 0 3px;
 }
 
-
-.main-style {
-  font-size: 25px;
-  font-weight: bold;
+.form-wrapper-2 button {
+overflow: visible;
+position: relative;
+float: right;
+border: 0;
+padding: 0;
+cursor: pointer;
+height: 40px;
+width: 110px;
+font: bold 15px/40px 'Oswald', sans-serif;
+color: #fff;
+text-transform: uppercase;
+background: #D88F3C;
+border-radius: 0 3px 3px 0;
+text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
 }
-
-
-/* TEMPERATURE AND BLOCK */
-.middle {
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  /* TEMP BORDER*/
-  border: 2px black solid;
-
+.form-wrapper-2 button:hover{
+background: #FA8807;
 }
-
-div .temperature {
-  font-size: 1.5625rem;
-
+.form-wrapper-2 button:active,
+.form-wrapper-2 button:focus{
+background: #c42f2f;
 }
-
-.bottom {
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  /* TEMP BORDER*/
-  border: 2px black solid;
+.form-wrapper-2 button:before {
+content: '';
+position: absolute;
+border-width: 8px 8px 8px 0;
+border-style: solid solid solid none;
+border-color: transparent #D88F3C transparent;
+top: 12px;
+left: -6px;
 }
