@@ -1,6 +1,18 @@
 <!--
 WEATHER STATION
-TO START UP JUST OPEN INDEX.HTML IN BROWSER AND SEARCH THE WEATHER!
+
+\\\\\\\\\STEPS TO WORKING THIS TEMPORARY APPID\\\\\\\\\
+
+1. OPEN zip/folder in a source code editor (preferably ATOM)
+
+2. INPUT API key for openweathermap API (If you have one)
+
+3. OPEN Index.html in a Web Browser
+
+4. CHECK the weather of any City 
+
+
+
 
 
 - Simple application to check the weather of different locations
