@@ -42,7 +42,7 @@ CURRENT WEATHER CSS
 }
 
 .current-weather-stats {
-  margin-left: 5%;
+  margin-left: 3%;
   float: left;
   line-height: 4vw;
   position: relative;
@@ -98,6 +98,11 @@ table tr td {
 #weather--sidebar {
   width: 14.5%;
   display: inline-block;
+}
+
+.spacer {
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 
