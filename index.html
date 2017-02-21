@@ -12,293 +12,303 @@
 
   </head>
   <body>
+  <div id="weather--bodyMain">
+  <!-- HEADER -->
+    <div id="weather--headerbar">
+      test
+    </div>
 
-  <div class="container-all">
+  <!-- SIDEBARB -->
+    <div id="weather--sidebar">
+      test
+    </div>
+
+    <div class="container-all">
 
 
 <!-- SEARCH FUNCTION -->
-    <div class="button_box2">
-            <form id="search" class="form-wrapper-2 cf" method="get" action="index.html">
-            <input type="text" id="search-input"placeholder="Search City here..." required>
-            <button type="submit" onclick="searchBar()" value="search" class="search-button">Search</button>
-        </form>
-    </div>
+        <div class="button_box2">
+                <form id="search" class="form-wrapper-2 cf" method="get" action="index.html">
+                <input type="text" id="search-input"placeholder="Search City here..." required>
+                <button type="submit" onclick="searchBar()" value="search" class="search-button">Search</button>
+            </form>
+        </div>
 
+
+        <div class="horizontal-break">
+          <hr>
+        </div>
+
+
+<!-- CONTAINER FOR ENTIRE FORCAST -->
+        <div class="weather-forcast">
+          <!-- ICON -->
+            <div class="top-1">
+                <div class="current-weather">
+                  <!-- ICON & TEMP & LOCATION DIV -->
+                  <div class="location-1"><span id="location" class="location-style-1">Unknown</span><strong>,</strong><span id="country" class="country-style"></span></div>
+                    <img id="icon" width="35%" src="assets/img/01d.png" />
+                    <div class="temperature-1"><span id="temperature" class="current-style">0</span><strong class="">&deg;</strong></div>
+                    <div class="current-day">
+                        <span>TODAY <br></span>
+                    </div>
+                </div>
+
+                <!-- MAIN DIV -->
+                <div class="current-weather-stats">
+                  <table>
+                    <tr>
+                      <td>
+                        Status :
+                      </td>
+                      <td>
+                        <div class="box-1"><span id="main" class="current-style">Unknown</span></div>
+                      </td>
+                    </tr>
+
+                    <!-- DESCRIPTION DIV -->
+                    <tr>
+                      <td>
+                        Cloudiness :
+                      </td>
+                      <td>
+                        <div class="box-1"><span id="description" class="current-style">Unknown</span></div>
+                      </td>
+                    </tr>
+
+                    <!-- HUMIDITY DIV -->
+                    <tr>
+                      <td>
+                        Humidity :
+                      </td>
+                      <td>
+                        <div class="box-1">
+                          <img src="assets/img/humidity.png" height="20vw" />
+                          <span id="humidity" class="current-style">0</span><strong class="current-style">%</strong>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- WIND DIV -->
+                    <tr>
+                      <td>
+                        Wind :
+                      </td>
+                      <td>
+                        <div class="box-1">
+                          <span id="wind" class="current-style">0</span> <span class="current-style">mph - </span> <span id="direction" class="current-style">N</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- PRESSURE DIV -->
+                    <tr>
+                      <td id="week-avg">
+                        Pressure (Week avg.)
+                      </td>
+                      <td>
+                        <div class="box-1">
+                          <span class="current-style" id="pressure-avg">0</span><bold class="current-style"> hpa</bold>
+                        </div>
+
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- END OF CURRENT DATA -->
+            </div>
+
+            <div class="rest-of-days">
+
+            <!-- Each DAY -->
+              <div class="each-day">
+            <!-- CONTAINER FOR ENTIRE FORCAST -->
+                  <div class="weather-forcast-1">
+                      <!-- ICON -->
+
+                      <div class="day">
+                        <span class="forecast-days">Tomorrow</span>
+                      </div>
+                      <div class="top">
+                        <div class="icon-container">
+                          <img id="icon2" class="overlay" width="50%" src="assets/img/01d.png" />
+                        </div>
+
+                          <div class="main"><span id="main2" class="main-style">Unknown</span></div>
+                          <div class="description"><span id="description2">Unknown</span></div>
+                      </div>
+                      <div class="middle">
+                      <!-- TEMP & LOCATION DIV -->
+                          <div class="temperature"><span id="temperature2" class="temp-style">0</span>&deg;</div>
+                      </div>
+                    <!-- HUMIDITY & WIND DIV -->
+                      <div class="bottom">
+                          <div class="humidity">
+                              <img src="assets/img/humidity.png" height="16px" />
+                              <span id="humidity2">0</span>%
+                          </div>
+                          <div class="wind">
+                              <span id="wind2">0</span> mph <span id="direction2">N</span>
+                          </div>
+                      </div>
+                  </div>
+
+            <!-- CONTAINER FOR ENTIRE FORCAST -->
+                  <div class="weather-forcast-1">
+                          <!-- ICON -->
+                      <div class="day">
+                        <span class="forecast-days">Day 3</span>
+                      </div>
+                      <div class="top">
+                          <img id="icon3" class="overlay" width="50%" src="assets/img/01d.png" />
+                          <div class="main"><span id="main3" class="main-style">Unknown</span></div>
+                          <div class="description"><span id="description3">Unknown</span></div>
+                      </div>
+                      <div class="middle">
+                      <!-- TEMP & LOCATION DIV -->
+                          <div class="temperature"><span id="temperature3" class="temp-style">0</span>&deg;</div>
+                      </div>
+                      <!-- HUMIDITY & WIND DIV -->
+                      <div class="bottom">
+                          <div class="humidity">
+                              <img src="assets/img/humidity.png" height="16px" />
+                              <span id="humidity3">0</span>%
+                          </div>
+                          <div class="wind">
+                              <span id="wind3">0</span> mph <span id="direction3">N</span>
+                          </div>
+                      </div>
+                  </div>
+
+            <!-- CONTAINER FOR ENTIRE FORCAST -->
+                  <div class="weather-forcast-1">
+                        <!-- ICON -->
+                      <div class="day">
+                        <span class="forecast-days">Day 4</span>
+                      </div>
+                      <div class="top">
+                          <img id="icon4" class="overlay" width="50%" src="assets/img/01d.png" />
+                          <div class="main"><span id="main4" class="main-style">Unknown</span></div>
+                          <div class="description"><span id="description4">Unknown</span></div>
+                      </div>
+                      <div class="middle">
+                            <!-- TEMP & LOCATION DIV -->
+                          <div class="temperature"><span id="temperature4" class="temp-style">0</span>&deg;</div>
+                      </div>
+                            <!-- HUMIDITY & WIND DIV -->
+                      <div class="bottom">
+                          <div class="humidity">
+                              <img src="assets/img/humidity.png" height="16px" />
+                              <span id="humidity4">0</span>%
+                          </div>
+                          <div class="wind">
+                              <span id="wind4">0</span> mph <span id="direction4">N</span>
+                          </div>
+                      </div>
+                  </div>
+
+
+            <!-- CONTAINER FOR ENTIRE FORCAST -->
+                  <div class="weather-forcast-1">
+                          <!-- ICON -->
+                      <div class="day">
+                        <span class="forecast-days">Day 5</span>
+                      </div>
+                      <div class="top">
+                          <img id="icon5" class="overlay" width="50%" src="assets/img/01d.png" />
+                          <div class="main"><span id="main5" class="main-style">Unknown</span></div>
+                          <div class="description"><span id="description5">Unknown</span></div>
+                      </div>
+                      <div class="middle">
+                      <!-- TEMP & LOCATION DIV -->
+                          <div class="temperature"><span id="temperature5" class="temp-style">0</span>&deg;</div>
+                      </div>
+                      <!-- HUMIDITY & WIND DIV -->
+                      <div class="bottom">
+                          <div class="humidity">
+                              <img src="assets/img/humidity.png" height="16px" />
+                              <span id="humidity5">0</span>%
+                          </div>
+                          <div class="wind">
+                              <span id="wind5">0</span> mph <span id="direction5">N</span>
+                          </div>
+                      </div>
+                  </div>
+
+
+            <!-- CONTAINER FOR ENTIRE FORCAST -->
+                  <div class="weather-forcast-1">
+                          <!-- ICON -->
+                      <div class="day">
+                        <span class="forecast-days">Day 6</span>
+                      </div>
+                      <div class="top">
+                          <img id="icon6" class="overlay" width="50%" src="assets/img/01d.png" />
+                          <div class="main"><span id="main6" class="main-style">Unknown</span></div>
+                          <div class="description"><span id="description6">Unknown</span></div>
+                      </div>
+                      <div class="middle">
+                      <!-- TEMP & LOCATION DIV -->
+                          <div class="temperature"><span id="temperature6" class="temp-style">0</span>&deg;</div>
+                      </div>
+                      <!-- HUMIDITY & WIND DIV -->
+                      <div class="bottom">
+                          <div class="humidity">
+                              <img src="assets/img/humidity.png" height="16px" />
+                              <span id="humidity6">0</span>%
+                          </div>
+                          <div class="wind">
+                              <span id="wind6">0</span> mph <span id="direction6">N</span>
+                          </div>
+                      </div>
+                  </div>
+
+
+            <!-- CONTAINER FOR ENTIRE FORCAST -->
+                  <div class="weather-forcast-last">
+                          <!-- ICON -->
+                      <div class="day">
+                        <span class="forecast-days">Day 7</span>
+                      </div>
+                      <div class="top">
+                          <div class="icon-container">
+                            <img id="icon7" class="overlay" width="50%" src="assets/img/01d.png" />
+                          </div>
+                          <div class="main"><span id="main7" class="main-style">Unknown</span></div>
+                          <div class="description"><span id="description7">Unknown</span></div>
+                      </div>
+                      <div class="middle">
+                      <!-- TEMP & LOCATION DIV -->
+                          <div class="temperature"><span id="temperature7" class="temp-style">0</span>&deg;</div>
+                      </div>
+                      <!-- HUMIDITY & WIND DIV -->
+                      <div class="bottom">
+                          <div class="humidity">
+                              <img src="assets/img/humidity.png" height="16px" />
+                              <span id="humidity7">0</span>%
+                          </div>
+                          <div class="wind">
+                              <span id="wind7">0</span> mph <span id="direction7">N</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            <!-- END of Each-day DIV -->
+            </div>
+
+        </div>
+<!-- END -->
 
     <div class="horizontal-break">
       <hr>
     </div>
 
 
-<!-- CONTAINER FOR ENTIRE FORCAST -->
-      <div class="weather-forcast">
-        <!-- ICON -->
-          <div class="top-1">
-              <div class="current-weather">
-                <!-- ICON & TEMP & LOCATION DIV -->
-                <div class="location-1"><span id="location" class="location-style-1">Unknown</span><strong>,</strong><span id="country" class="country-style"></span></div>
-                  <img id="icon" width="35%" src="assets/img/01d.png" />
-                  <div class="temperature-1"><span id="temperature" class="current-style">0</span><strong class="">&deg;</strong></div>
-                  <div class="current-day">
-                      <span>TODAY <br></span>
-                  </div>
-              </div>
 
-              <!-- MAIN DIV -->
-              <div class="current-weather-stats">
-                <table>
-                  <tr>
-                    <td>
-                      Status :
-                    </td>
-                    <td>
-                      <div class="box-1"><span id="main" class="current-style">Unknown</span></div>
-                    </td>
-                  </tr>
-
-                  <!-- DESCRIPTION DIV -->
-                  <tr>
-                    <td>
-                      Cloudiness :
-                    </td>
-                    <td>
-                      <div class="box-1"><span id="description" class="current-style">Unknown</span></div>
-                    </td>
-                  </tr>
-
-                  <!-- HUMIDITY DIV -->
-                  <tr>
-                    <td>
-                      Humidity :
-                    </td>
-                    <td>
-                      <div class="box-1">
-                        <img src="assets/img/humidity.png" height="20vw" />
-                        <span id="humidity" class="current-style">0</span><strong class="current-style">%</strong>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <!-- WIND DIV -->
-                  <tr>
-                    <td>
-                      Wind :
-                    </td>
-                    <td>
-                      <div class="box-1">
-                        <span id="wind" class="current-style">0</span> <span class="current-style">mph - </span> <span id="direction" class="current-style">N</span>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <!-- PRESSURE DIV -->
-                  <tr>
-                    <td id="week-avg">
-                      Pressure (Week avg.)
-                    </td>
-                    <td>
-                      <div class="box-1">
-                        <span class="current-style" id="pressure-avg">0</span><bold class="current-style"> hpa</bold>
-                      </div>
-
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <!-- END OF CURRENT DATA -->
-          </div>
-
-          <div class="rest-of-days">
-
-          <!-- Each DAY -->
-            <div class="each-day">
-          <!-- CONTAINER FOR ENTIRE FORCAST -->
-                <div class="weather-forcast-1">
-                    <!-- ICON -->
-
-                    <div class="day">
-                      <span class="forecast-days">Tomorrow</span>
-                    </div>
-                    <div class="top">
-                      <div class="icon-container">
-                        <img id="icon2" class="overlay" width="50%" src="assets/img/01d.png" />
-                      </div>
-
-                        <div class="main"><span id="main2" class="main-style">Unknown</span></div>
-                        <div class="description"><span id="description2">Unknown</span></div>
-                    </div>
-                    <div class="middle">
-                    <!-- TEMP & LOCATION DIV -->
-                        <div class="temperature"><span id="temperature2" class="temp-style">0</span>&deg;</div>
-                    </div>
-                  <!-- HUMIDITY & WIND DIV -->
-                    <div class="bottom">
-                        <div class="humidity">
-                            <img src="assets/img/humidity.png" height="16px" />
-                            <span id="humidity2">0</span>%
-                        </div>
-                        <div class="wind">
-                            <span id="wind2">0</span> mph <span id="direction2">N</span>
-                        </div>
-                    </div>
-                </div>
-
-          <!-- CONTAINER FOR ENTIRE FORCAST -->
-                <div class="weather-forcast-1">
-                        <!-- ICON -->
-                    <div class="day">
-                      <span class="forecast-days">Day 3</span>
-                    </div>
-                    <div class="top">
-                        <img id="icon3" class="overlay" width="50%" src="assets/img/01d.png" />
-                        <div class="main"><span id="main3" class="main-style">Unknown</span></div>
-                        <div class="description"><span id="description3">Unknown</span></div>
-                    </div>
-                    <div class="middle">
-                    <!-- TEMP & LOCATION DIV -->
-                        <div class="temperature"><span id="temperature3" class="temp-style">0</span>&deg;</div>
-                    </div>
-                    <!-- HUMIDITY & WIND DIV -->
-                    <div class="bottom">
-                        <div class="humidity">
-                            <img src="assets/img/humidity.png" height="16px" />
-                            <span id="humidity3">0</span>%
-                        </div>
-                        <div class="wind">
-                            <span id="wind3">0</span> mph <span id="direction3">N</span>
-                        </div>
-                    </div>
-                </div>
-
-          <!-- CONTAINER FOR ENTIRE FORCAST -->
-                <div class="weather-forcast-1">
-                      <!-- ICON -->
-                    <div class="day">
-                      <span class="forecast-days">Day 4</span>
-                    </div>
-                    <div class="top">
-                        <img id="icon4" class="overlay" width="50%" src="assets/img/01d.png" />
-                        <div class="main"><span id="main4" class="main-style">Unknown</span></div>
-                        <div class="description"><span id="description4">Unknown</span></div>
-                    </div>
-                    <div class="middle">
-                          <!-- TEMP & LOCATION DIV -->
-                        <div class="temperature"><span id="temperature4" class="temp-style">0</span>&deg;</div>
-                    </div>
-                          <!-- HUMIDITY & WIND DIV -->
-                    <div class="bottom">
-                        <div class="humidity">
-                            <img src="assets/img/humidity.png" height="16px" />
-                            <span id="humidity4">0</span>%
-                        </div>
-                        <div class="wind">
-                            <span id="wind4">0</span> mph <span id="direction4">N</span>
-                        </div>
-                    </div>
-                </div>
-
-
-          <!-- CONTAINER FOR ENTIRE FORCAST -->
-                <div class="weather-forcast-1">
-                        <!-- ICON -->
-                    <div class="day">
-                      <span class="forecast-days">Day 5</span>
-                    </div>
-                    <div class="top">
-                        <img id="icon5" class="overlay" width="50%" src="assets/img/01d.png" />
-                        <div class="main"><span id="main5" class="main-style">Unknown</span></div>
-                        <div class="description"><span id="description5">Unknown</span></div>
-                    </div>
-                    <div class="middle">
-                    <!-- TEMP & LOCATION DIV -->
-                        <div class="temperature"><span id="temperature5" class="temp-style">0</span>&deg;</div>
-                    </div>
-                    <!-- HUMIDITY & WIND DIV -->
-                    <div class="bottom">
-                        <div class="humidity">
-                            <img src="assets/img/humidity.png" height="16px" />
-                            <span id="humidity5">0</span>%
-                        </div>
-                        <div class="wind">
-                            <span id="wind5">0</span> mph <span id="direction5">N</span>
-                        </div>
-                    </div>
-                </div>
-
-
-          <!-- CONTAINER FOR ENTIRE FORCAST -->
-                <div class="weather-forcast-1">
-                        <!-- ICON -->
-                    <div class="day">
-                      <span class="forecast-days">Day 6</span>
-                    </div>
-                    <div class="top">
-                        <img id="icon6" class="overlay" width="50%" src="assets/img/01d.png" />
-                        <div class="main"><span id="main6" class="main-style">Unknown</span></div>
-                        <div class="description"><span id="description6">Unknown</span></div>
-                    </div>
-                    <div class="middle">
-                    <!-- TEMP & LOCATION DIV -->
-                        <div class="temperature"><span id="temperature6" class="temp-style">0</span>&deg;</div>
-                    </div>
-                    <!-- HUMIDITY & WIND DIV -->
-                    <div class="bottom">
-                        <div class="humidity">
-                            <img src="assets/img/humidity.png" height="16px" />
-                            <span id="humidity6">0</span>%
-                        </div>
-                        <div class="wind">
-                            <span id="wind6">0</span> mph <span id="direction6">N</span>
-                        </div>
-                    </div>
-                </div>
-
-
-          <!-- CONTAINER FOR ENTIRE FORCAST -->
-                <div class="weather-forcast-last">
-                        <!-- ICON -->
-                    <div class="day">
-                      <span class="forecast-days">Day 7</span>
-                    </div>
-                    <div class="top">
-                        <div class="icon-container">
-                          <img id="icon7" class="overlay" width="50%" src="assets/img/01d.png" />
-                        </div>
-                        <div class="main"><span id="main7" class="main-style">Unknown</span></div>
-                        <div class="description"><span id="description7">Unknown</span></div>
-                    </div>
-                    <div class="middle">
-                    <!-- TEMP & LOCATION DIV -->
-                        <div class="temperature"><span id="temperature7" class="temp-style">0</span>&deg;</div>
-                    </div>
-                    <!-- HUMIDITY & WIND DIV -->
-                    <div class="bottom">
-                        <div class="humidity">
-                            <img src="assets/img/humidity.png" height="16px" />
-                            <span id="humidity7">0</span>%
-                        </div>
-                        <div class="wind">
-                            <span id="wind7">0</span> mph <span id="direction7">N</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          <!-- END of Each-day DIV -->
-          </div>
-
-      </div>
-<!-- END -->
-
-  <div class="horizontal-break">
-    <hr>
-  </div>
-
-
-
-  </div>
+    </div>
   <!-- CONTAINER -->
 
-
+  </div>
 
   </body>
 </html>
